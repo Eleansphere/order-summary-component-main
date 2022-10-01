@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --paleBlue:hsl(225, 100%, 94%);
+    --brightBlue:hsl(245, 75%, 52%);
+    --veryPaleBlue:hsl(225, 100%, 98%);
+    --desaturatedBlue:hsl(224, 23%, 55%);
+    --darkBlue:hsl(223, 47%, 23%);
+}
+/*LAYOUT*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    min-height: 100vh;
+    min-width: 375px;
+    margin: 0 auto;
+    background-image:url(images/pattern-background-desktop.svg);
+    background-repeat:repeat-x;
+    background-size:contain;
+    background-color: var(--paleBlue);
+    font-family: 'Red Hat Display', sans-serif;
+}
+.wrapper{
+    display: grid;
+    grid-template-rows: 0.4fr 1.2fr;
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    width: 100%;
+}
+.image-hero img{
+    width: 100%;
+    display: block;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+.page-content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    row-gap: 1rem;
+    background-color: white;
+    padding: 2.8rem;
+    border-radius: 0 0 0.6rem 0.6rem;
+}
+.annual-plan{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    width: 100%;
+    background-color:var(--veryPaleBlue);
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+.music-icon-wrapper{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.music-icon{
+    padding-right: 0.6rem;
+}
+/*FORMATING*/
+button{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    color: white;
+    background-color: var(--brightBlue);
+    font-weight: 700;
+    box-shadow: 0px 15px 5px var(--veryPaleBlue);
+}
+p{
+    text-align: center;
+    line-height: 1.5;
+    opacity: 0.5;
+}
+
+span{
+    opacity: 0.5;
+}
+#cancel{
+    text-decoration: none;
+    color: var(--desaturatedBlue);
+    font-weight:500;
+}
+/*HOVERS*/
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+#cancel:hover{
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+}
+/*RESPONSIVE*/  
+@media only screen and (max-width:450px) {
+    body{
+        background-size: auto;
+    }
+    .wrapper{
+        min-width: 375px;
+        width: 80%;
+    }
+}
